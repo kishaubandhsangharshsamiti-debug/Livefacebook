@@ -7,86 +7,68 @@
 <style>
 
 body{
-margin:0;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:transparent;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:transparent;
 }
 
 .livefacebook{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 28px;
+    background:#1877F2;
+    border-radius:50px;
+    font-size:28px;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
 
-display:flex;
-align-items:center;
+    /* Blue Glow */
+    box-shadow:0 0 15px #1877F2,
+               0 0 30px #1877F2;
 
-padding:12px 28px;
-
-background:#1877F2;
-
-border-radius:50px;
-
-font-size:28px;
-
-font-family:Arial;
-
-font-weight:bold;
-
-color:white;
-
-text-decoration:none;
-
-box-shadow:0 0 25px #1877F2;
-
-animation:pulse 1s infinite;
-
+    animation:pulse 1s infinite;
 }
 
 .dot{
-
-width:18px;
-
-height:18px;
-
-background:white;
-
-border-radius:50%;
-
-margin-right:12px;
-
-animation:blink .8s infinite;
-
+    width:18px;
+    height:18px;
+    background:#ffffff;
+    border-radius:50%;
+    animation:blink .8s infinite;
 }
 
 @keyframes blink{
-
-0%{opacity:1;}
-
-50%{opacity:0;}
-
-100%{opacity:1;}
-
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
 }
 
 @keyframes pulse{
 
-0%{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 10px #1877F2,
+                   0 0 20px #1877F2;
+    }
 
-transform:scale(1);
+    50%{
+        transform:scale(1.10);
+        box-shadow:0 0 20px #1877F2,
+                   0 0 45px #1877F2,
+                   0 0 70px #1877F2;
+    }
 
-}
-
-50%{
-
-transform:scale(1.08);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 10px #1877F2,
+                   0 0 20px #1877F2;
+    }
 
 }
 
@@ -102,10 +84,9 @@ target="_blank">
 
 <div class="dot"></div>
 
-LIVEfacebook
+LIVE Facebook
 
 </a>
 
 </body>
-
 </html>
