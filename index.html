@@ -2,73 +2,171 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
     background:transparent;
 }
 
 .livefacebook{
+
     display:flex;
     align-items:center;
-    gap:12px;
-    padding:12px 28px;
+    gap:14px;
+
+    padding:12px 26px;
+
     background:#1877F2;
-    border-radius:50px;
-    font-size:28px;
-    font-family:Arial, sans-serif;
-    font-weight:bold;
-    color:white;
+
+    color:#fff;
+
     text-decoration:none;
 
-    /* Blue Glow */
-    box-shadow:0 0 15px #1877F2,
-               0 0 30px #1877F2;
+    border-radius:60px;
 
-    animation:pulse 1s infinite;
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    box-shadow:0 0 12px rgba(24,119,242,.6);
+
+    transition:.3s;
+
+    animation:pulse 1.2s infinite;
+
 }
 
-.dot{
-    width:18px;
-    height:18px;
-    background:#ffffff;
+/* Facebook Logo */
+
+.logo{
+
+    width:38px;
+
+    height:38px;
+
     border-radius:50%;
+
+    background:#fff;
+
+    color:#1877F2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    font-family:Arial;
+
+}
+
+/* LIVE Dot */
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    background:#ff0000;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px red;
+
     animation:blink .8s infinite;
+
+}
+
+.text{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.live{
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+}
+
+.facebook{
+
+font-weight:bold;
+
+}
+
+.livefacebook:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 30px rgba(24,119,242,.9);
+
 }
 
 @keyframes blink{
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
+
+0%,100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:.2;
+
+transform:scale(.6);
+
+}
+
 }
 
 @keyframes pulse{
 
-    0%{
-        transform:scale(1);
-        box-shadow:0 0 10px #1877F2,
-                   0 0 20px #1877F2;
-    }
+0%{
 
-    50%{
-        transform:scale(1.10);
-        box-shadow:0 0 20px #1877F2,
-                   0 0 45px #1877F2,
-                   0 0 70px #1877F2;
-    }
+box-shadow:0 0 10px rgba(24,119,242,.5);
 
-    100%{
-        transform:scale(1);
-        box-shadow:0 0 10px #1877F2,
-                   0 0 20px #1877F2;
-    }
+}
+
+50%{
+
+box-shadow:0 0 30px rgba(24,119,242,1);
+
+}
+
+100%{
+
+box-shadow:0 0 10px rgba(24,119,242,.5);
+
+}
 
 }
 
@@ -82,9 +180,19 @@ body{
 href="https://www.facebook.com/share/1BhRbEEbuA/"
 target="_blank">
 
+<div class="logo">f</div>
+
+<div class="text">
+
 <div class="dot"></div>
 
+<div>
+
 LIVE Facebook
+
+</div>
+
+</div>
 
 </a>
 
